@@ -1,0 +1,75 @@
+/* Para tablets (768px a 1024px) */
+@media screen and (max-width: 1024px) {
+    /* Navbar */
+    nav {
+        padding: 0 10px;
+    }
+
+    nav ul {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    nav li a {
+        font-size: 0.9em;
+    }
+
+    /* Secciones generales */
+    section {
+        padding: 30px 20px;
+    }
+
+    /* Título y subtítulo */
+    h1 {
+        font-size: 2.5em;
+        margin: 30px auto 15px;
+    }
+
+    .subtitulo {
+        font-size: 1em;
+    }
+
+    /* Sobre mí */
+    .sobre-mi-contenido {
+        padding: 1rem;
+    }
+
+    .icono-perfil {
+        flex: 0 0 200px;
+    }
+
+    /* Cartas */
+    .carta-container {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .carta {
+        height: 350px;
+    }
+
+    /* Certificados */
+    .galeria-multimedia {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    /* Blog */
+    .blog-posts {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    /* Favoritos */
+    .favoritos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    body {
+        padding-top: 60px;
+    }
+
+    header#inicio {
+        margin-top: 50px;
+    }
+}

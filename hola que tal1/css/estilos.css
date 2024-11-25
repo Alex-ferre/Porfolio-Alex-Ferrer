@@ -1,0 +1,609 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    display: relative;
+    background-color: #333 !important;
+    padding-top: 60px;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: #333 !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: transparent;
+    position: relative;
+}
+
+/* Estilo del icono */
+nav li a i {
+    color: #ffffff41;  /* Color inicial del icono */
+    transition: all 0.3s ease;
+}
+
+/* Estilo del texto */
+nav li a span {
+    color: #ffffff41;  /* Color inicial del texto */
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Añadimos la línea usando pseudo-elemento */
+nav li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Ajusta la posición vertical de la línea */
+    left: 0;
+    width: 0; /* Comienza con ancho 0 */
+    height: 3px; /* Grosor de la línea */
+    background-color: #ff0000; /* Color de la línea */
+    transition: width 0.3s ease; /* Animación de la línea */
+}
+
+/* Al hacer hover, la línea se expande */
+nav li a:hover::after {
+    width: 100%; /* La línea se expande al 100% */
+}
+
+/* Hover del icono */
+nav li a:hover i {
+    color: #efeeee;    /* Color del icono en hover */
+    transform: scale(1.1);
+}
+
+/* Hover del texto */
+nav li a:hover span {
+    color: #efeeee;    /* Color del texto en hover */
+    transform: scale(1.1);
+}
+nav li a:active,
+nav li a:focus {
+    background: transparent;
+}
+
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 3em;
+    text-align: center;
+    position: relative;
+    margin: 20px auto;
+    transition: all .3s ease-in-out;
+    color: #ffffff !important;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+h1:hover {
+    transition: all .3s ease-in-out;
+    font-size: 3.1em;
+    text-shadow: 5px 5px 5px rgb(248, 0, 0); 
+}
+
+h1::before,
+h1::after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 2px solid #838383; 
+}
+
+h1::before {
+    left: 0;
+}
+
+h1::after {
+    right: 0;
+}
+
+.subtitulo {
+    font-size: 1.2em;
+    color: #bcbbbb;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Estilo para las cartas */
+.carta-container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.carta {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    flex: 1;
+    transition: 0.5s ease-in-out;
+}
+
+.carta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+}
+
+.carta-contenido {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+
+/* Efectos hover */
+.carta:hover {
+    flex: 3;
+}
+
+.carta:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.6);
+}
+
+.carta:hover .carta-contenido {
+    bottom: 0;
+}
+
+.carta h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5em;
+}
+
+.carta p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Sección Sobre mí */
+#sobre-mi {
+    padding: 40px;
+    color: #fff;
+    background-color: #444 !important;
+    text-align: center;
+}
+
+#sobre-mi .sobre-mi-contenido {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.icono-perfil {
+    flex: 0 0 300px;
+}
+
+.carita {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.sobre-mi-texto {
+    flex: 1;
+}
+
+#sobre-mi .sobre-mi-texto {
+    color: #bcbbbb;
+    display: flex;
+    gap: 2px;
+    flex-wrap: wrap;
+    align-content: baseline;
+    flex-direction: column;
+    font-size: 20px;
+    border: 2px solid #fff;
+    padding: 10px;
+    margin: 20px auto;
+    transition: all .3s ease-in-out;
+    
+}
+#sobre-mi .sobre-mi-texto:hover {
+    transition: all.3s ease-in-out;
+    border: 2px solid #ffffff;
+    color: #333;
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.911); /* Sombra */
+    background-color: antiquewhite;
+}
+
+/* Sección Multimedia */
+.galeria-multimedia {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.card {
+    width: 100%;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    aspect-ratio: 16/9;
+}
+
+.card .image-box {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+.card .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    transition: 0.5s ease-in-out;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+
+.card:hover img {
+    filter: grayscale(1) brightness(0.4);
+}
+
+.card:hover::after {
+    opacity: 1;
+    inset: 20px;
+}
+
+.content {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.content h2,
+.content p {
+    font-family: 'Courier New', Courier, monospace;
+    transition: 0.4s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.card:hover .content h2,
+.card:hover .content p {
+    opacity: 1;
+    transform: translateY(0);
+    color: white;
+}
+
+.card:hover .content h2 {
+    transition-delay: 0.1s;
+}
+
+.card:hover .content p {
+    transition-delay: 0.2s;
+}
+
+/* Estilo de la imagen en cada carta */
+h3 {
+    font-family: "JetBrains Pro";
+    width: 50%;
+    color: wheat;
+    height: 50%;
+    justify-content: center;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+    font-size: 24px;
+}
+
+/* Texto debajo de la imagen */
+.carta-texto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    transform: translateY(100%);
+    opacity: 0;
+    justify-items: center;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    font-size: 20px;
+}
+
+.inicio {
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.inicio:hover {
+    background-color: #333;
+    color: #ffffff;
+}
+
+
+.carta:hover .carta-imagen {
+    transform: translateY(-90px) scale(0.8); 
+}
+
+.carta:hover .carta-texto {
+    transform: translateY(0);
+    opacity: 1; 
+    
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #efeeee;
+    font-size: 0.9em;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.carta h3,
+.carta .carta-texto {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+}
+
+/* Overlay oscuro para mejorar la legibilidad del texto */
+.carta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+/* Estilo para la separación entre secciones */
+.separador {
+    width: 100%;
+    height: 100px; /* Altura del espacio entre secciones */
+    background: linear-gradient(to bottom, transparent, #f5f5f5, transparent);
+    margin: 50px 0;
+    position: relative;
+}
+
+/* Línea decorativa (opcional) */
+.separador::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 1px;
+    background: #e0e0e0;
+}
+
+/* Ajustes para las secciones */
+#pasiones {
+    margin-bottom: 0; /* Elimina el margen inferior de la sección pasiones */
+}
+
+#multimedia {
+    margin-top: 0; /* Elimina el margen superior de la sección multimedia */
+}
+
+#pasiones h2, #multimedia h2 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #dae4ee;
+    margin: 2rem 0;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+/* Línea decorativa debajo del título */
+#pasiones h2::after, #multimedia h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    border-radius: 2px;
+}
+
+/* Efecto hover */
+#pasiones h2:hover::after, #multimedia h2:hover::after {
+    width: 200px;
+    transition: width 0.3s ease;
+}
+
+/* Efecto de texto con sombra */
+#pasiones h2, #multimedia h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.lista1 {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.lista1 li {
+    padding: 15px 0;
+}
+
+.lista1 a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lista1 a:hover {
+    background-color: #555;
+}
+
+.lista1 i {
+    margin-right: 5px;
+}
+
+/* Estilos para la sección de Blog */
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.post {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+}
+
+.post-imagen {
+    width: 100%;
+}
+
+.post-imagen img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.post-categoria {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.post-content {
+    padding: 1.5rem;
+}
+
+.post-meta {
+    display: flex;
+    gap: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.post h3 {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.post p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.leer-mas {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: gap 0.3s ease;
+}
+
+.leer-mas:hover {
+    gap: 0.8rem;
+}
+
+/* Aseguramos que no haya efectos de fondo en ningún estado */
+
+
+.audio-player {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.audio-player h4 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 0.9em;
+}
+
+.audio-player audio {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+}
+
+
