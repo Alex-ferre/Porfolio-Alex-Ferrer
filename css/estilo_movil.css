@@ -44,11 +44,7 @@
         margin-left: 0;
     }
 
-    nav li a:hover {
-        background-color: #333;
-        color: #fff;
-    }
-
+    nav
     /* Título */
     h1 {
         font-size: 1.8em;
