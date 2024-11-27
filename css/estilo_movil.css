@@ -44,6 +44,11 @@
         margin-left: 0;
     }
 
+    nav li a:hover {
+        background-color: #333;
+        color: #fff;
+    }
+
     /* Título */
     h1 {
         font-size: 1.8em;
@@ -146,4 +151,9 @@
         padding: 15px;
         font-size: 0.8em;
     }
+}
+
+::selection {
+    background: #4CAF50;
+    color: white;
 }
