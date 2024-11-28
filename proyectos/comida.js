@@ -130,49 +130,10 @@ const foodData = [
         }
     },
 
-    {
-        name: "Romanesco",
-        type: "vegetable",
-        color: "green",
-        image: "https://d1nfjnh4xzmgco.cloudfront.net/images/bimi/carousel/_hero/1147423/320759173_444372134554916_426130685953615021_n.webp",
-        nutrition: {
-            calories: 500,
-            protein: "20g",
-            carbs: "2.7g",
-            fiber: "30g",
-            vitamins: ["A", "C", "E"],
-        },
-        recipe: {
-            name: "Bimi con verduras saltedas",
-            ingredients: [
-                "1 bimi",
-                "1/4 pimiento verde",
-                "1/4 pimiento rojo",
-                "1/2 zanahoria",
-                "1/2 tomate",
-                "Lomo bajo de ternera",
-                "Salsa de ostras",
-                "Azucar moreno",
-                "Salsa de soja"
-            ],
-
-            instructions: [
-                "Cortar las verduras",
-                "Cortar el lomo bajo de ternera",
-                "En un wok ponemos un poco de aceite y a fuego alto",
-                "Cuando el aceite este bien caliente añadimos las verduras",
-                "Una vez hechas las verduras ponemos la carne",
-                "Despues de que la carne este hecha ",
-                "Dejamos enfriar unos 2 - 3 minutos",
-                 "ahora a disfrutar del plato 😋😮"
-
-            ]
-        }
-    }
-
-    
         
     // Añadir más frutas y verduras aquí
+
+    
 ];
 
 function createFoodCard(food) {
