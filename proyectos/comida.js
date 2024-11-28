@@ -86,7 +86,7 @@ const foodData = [
     {
         name: "Bimi",
         type: "vegetable",
-        color: "white",
+        color: "green",
         image: "https://d1nfjnh4xzmgco.cloudfront.net/images/bimi/carousel/_hero/1147423/320759173_444372134554916_426130685953615021_n.webp",
         nutrition: {
             calories: 500,
@@ -140,9 +140,11 @@ const foodData = [
             protein: "15g",
             carbs: "50g",
             fiber: "25g",
-            vitamins: ["B1", "B2", "C", "K"]
-
+            vitamins: ["B1", "B2", "C", "K"],
        },
+        recipe: {
+
+        }
     }
         
     // Añadir más frutas y verduras aquí
