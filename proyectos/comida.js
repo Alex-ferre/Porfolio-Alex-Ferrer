@@ -100,20 +100,51 @@ const foodData = [
             ingredients: [
                 "1 bimi",
                 "1/4 pimiento verde",
-                "1/2 cebolla",
                 "1/4 pimiento rojo",
                 "1/2 zanahoria",
                 "1/2 tomate",
                 "Lomo bajo de ternera",
                 "Salsa de ostras",
-                "Azucar moreno"
+                "Azucar moreno",
+                "Salsa de soja"
+            ],
+
+            sauceIngredient: [
+                "En un bol ponemos la salsa de ostras",
+                "En este mismo añadimos azúcar moreno",
+                "Cuando esten disuelto el mejunje Art Attack lo ponemos en una cazuela pequeña y a fuego medio-bajo",
+                "Despúes de 5 minutos al fuego y este mas líquida la reservamos a temperatura ambiente",
+                "Hasta que este la carne y las verduras recién hechas se tiene que haver hecho un poco sólida."
             ],
             instructions: [
-                "",
+                "Cortar las verduras",
+                "Cortar el lomo bajo de ternera",
+                "En un wok ponemos un poco de aceite y a fuego alto",
+                "Cuando el aceite este bien caliente añadimos las verduras",
+                "Una vez hechas las verduras ponemos la carne",
+                "Despues de que la carne este hecha ",
+                "Dejamos enfriar unos 2 - 3 minutos",
+                 "ahora a disfrutar del plato 😋😮"
 
             ]
         }
     },
+
+    {
+        name: "Romanesco",
+        type: "vegetable",
+        color: "green",
+        image: "https://lahuertadepepito.com/wp-content/uploads/elementor/thumbs/romanesco2-pde0lf06h2rho1u24vbjxmwrujjhuo4toe7bqav2m8.jpg",
+        nutrition: {
+            calories: 1500,
+            protein: "15g",
+            carbs: "50g",
+            fiber: "25g",
+            vitamins: ["B1", "B2", "C", "K"]
+
+       },
+    }
+        
     // Añadir más frutas y verduras aquí
 ];
 
@@ -180,6 +211,14 @@ function showDetails(foodName) {
             <ul>
                 ${food.recipe.ingredients.map(i => `<li>${i}</li>`).join('')}
             </ul>
+            
+            ${food.recipe.sauceIngredient ? `
+                <h4>Ingredientes para la Salsa:</h4>
+                <ul>
+                    ${food.recipe.sauceIngredient.map(i => `<li>${i}</li>`).join('')}
+                </ul>
+            ` : ''}
+
             <h4>Instrucciones:</h4>
             <ol>
                 ${food.recipe.instructions.map(i => `<li>${i}</li>`).join('')}
@@ -189,6 +228,7 @@ function showDetails(foodName) {
 
     modal.style.display = 'block';
 }
+
 
 function closeModal() {
     document.getElementById('foodModal').style.display = 'none';
