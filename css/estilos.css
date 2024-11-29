@@ -158,23 +158,7 @@ h1::after {
 }
 
 /* Tablet (768px a 1023px) */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    .carta-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-        padding: 1.5rem;
-    }
 
-    .carta {
-        width: 100%;
-        height: 350px;
-    }
-
-    .carta-contenido {
-        padding: 1.5rem;
-    }
-}
 
 /* Desktop (1024px y superior) */
 @media screen and (min-width: 1024px) {
