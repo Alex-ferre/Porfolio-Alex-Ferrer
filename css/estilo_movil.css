@@ -2,4 +2,13 @@
     .carta-container {
         flex-direction: column;
     }
+
+    .sobre-mi-texto {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        max-width: 300px;
+        margin-bottom: 1rem;
+        text-align: center;
+        
+    }
 }
