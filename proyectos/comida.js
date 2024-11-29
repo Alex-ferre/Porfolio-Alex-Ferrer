@@ -129,9 +129,101 @@ const foodData = [
             ]
         }
     },
-
-        
     // Añadir más frutas y verduras aquí
+    {
+        name: "Romanesco",
+        type: "vegetable",
+        color: "green",
+        image: "https://img2.rtve.es/i/?w=1600&i=1645434225293.jpg",
+        nutrition: {
+            calories: 31,
+            protein: "2.48g",
+            carbs: "5.4g",
+            fiber: "2-3g",
+            vitamins: ["A", "C", "E"],
+        },
+        recipe: {
+            name: "Romanesco al horno",
+            ingredients: [
+                "1 romanesco",
+                "Aceite de oliva",
+                "Sal",
+                "Pimienta"
+            ],
+
+            instructions: [
+                "Cortar el romanesco en arboles de tamaño medio",
+                "En un bol ponemos el aceite de oliva",
+                "Añadimos sal y pimienta",
+                "Ponemos el romanesco en una bandeja con papel de horno o vegetal",
+                "Hornear a 180°C por 45 minutos"
+            ]
+        }
+    },
+
+    {
+        name: "Pimiento Rojo",
+        type: "vegetable",
+        color: "red",
+        image: "https://img2.rtve.es/i/?w=1600&i=1645434225293.jpg",
+        nutrition: {
+            calories: 31,
+            protein: "2.48g",
+            carbs: "5.4g",
+            fiber: "2-3g",
+            vitamins: ["A", "C", "E"],
+        },
+        recipe: {
+            name: "Romanesco al horno",
+            ingredients: [
+                "1 romanesco",
+                "Aceite de oliva",
+                "Sal",
+                "Pimienta"
+            ],
+
+            instructions: [
+                "Cortar el romanesco en arboles de tamaño medio",
+                "En un bol ponemos el aceite de oliva",
+                "Añadimos sal y pimienta",
+                "Ponemos el romanesco en una bandeja con papel de horno o vegetal",
+                "Hornear a 180°C por 45 minutos"
+            ]
+        }
+    },
+
+    {
+        name: "Naranja",
+        type: "fruit",
+        color: "orange",
+        image: "https://www.frutamare.com/wp-content/uploads/2018/08/navelate_plus.jpg.webp",
+        nutrition: {
+            calories: 60,
+            protein: "1.2g",
+            carbs: "15g",
+            fiber: "3g",
+            vitamins: ["C", "B1", "B2", "B3", "B5", "B6", "B9", "B12", "E"],
+        },
+        recipe: {
+            name: "Naranja escarchada",
+            ingredients: [
+                "1 naranja",
+                "Azucar",
+                "Agua"
+            ],
+
+            instructions: [
+                "Cortar la naranja en rodajas",
+                "En un cazo ponemos el azucar y el agua",
+                "Cuando el azucar este derretido añadimos la naranja",
+                "Y movemos para que se mezclen bien los ingredientes",
+                "Dejamos enfriar y que el azucar se solidifique"
+            ]
+        }
+    },
+
+
+    
 
     
 ];
