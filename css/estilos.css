@@ -643,4 +643,109 @@ footer {
     border-radius: 5px;
 }
 
+/* Estilos base del dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dropdown-menu {
+    display: none;
+    background: #444;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+
+.dropdown-menu li a {
+    padding: 0.8rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ffffff41;
+    transition: all 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    color: #efeeee;
+    background-color: #555;
+}
+
+/* Móvil (hasta 767px) */
+@media screen and (max-width: 767px) {
+    .dropdown-toggle {
+        padding: 1rem;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        padding-left: 1rem;
+        background: #333;
+    }
+    
+    .dropdown-menu li a {
+        padding: 1rem;
+    }
+    
+    /* Animación para móvil */
+    .dropdown-menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+    
+    .dropdown.active .dropdown-menu {
+        max-height: 500px;
+        display: block;
+    }
+}
+
+/* Tablet (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 250px;
+        padding: 0.5rem 0;
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+/* Desktop (1024px y superior) */
+@media screen and (min-width: 1024px) {
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 200px;
+        padding: 0.5rem 0;
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+/* Animación de la flecha */
+.fa-chevron-down {
+    transition: transform 0.3s;
+}
+
+.dropdown.active .fa-chevron-down,
+.dropdown:hover .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
 
